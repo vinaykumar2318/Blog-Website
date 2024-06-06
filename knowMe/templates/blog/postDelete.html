@@ -1,0 +1,25 @@
+{% extends 'partials/base.html' %}
+{% block title %}Post Detail{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="cover">
+    <div class="container">
+        <div class="row mt-5 pt-3">
+            <div class="col-md-8 offset-md-2">
+                <div class="card my-3 shadow">
+                    <div class="card-body">
+                        <div class="alert alert-danger">
+                            Are you sure that you want to delete the post?
+                        </div>
+                        <form method="post">
+                            {% csrf_token %}
+                            <a class="btn btn-secondary btn-sm" href="{% url 'postDetail' post.id %}">Cancel</a>
+                            <input class="btn btn-primary btn-sm" type="submit" value="Confirm">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

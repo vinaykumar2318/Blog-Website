@@ -1,0 +1,13 @@
+.cover {
+    background: url('/media/background.jpg') no-repeat center center;
+    background-size: cover;
+    height: 775px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.system{
+    background: url('/media/cardBackground.jpg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
